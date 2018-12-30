@@ -1,0 +1,36 @@
+{
+    "name": "andaletech/laravel-user",
+    "description": "A Laravel 5.7+ package provides a set of user and role models",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kolado Sidibe",
+            "email": "kolado.sidibe@andaletech.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/database": "^5.7",
+        "illuminate/support": "^5.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "fzaninotto/faker": "^1.8",
+        "laravel/framework": "^5.7",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andaletech\\LaravelUser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
