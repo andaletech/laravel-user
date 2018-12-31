@@ -38,4 +38,17 @@ class PhoneTypeModelTest extends TestCase
             $this->assertEquals($value, $aPhoneType->{$key});
         }
     }
+
+    /**
+     * Test that you can create a PhoneType.
+     *
+     * @test
+     * @return void
+     */
+    public function seeder_works()
+    {
+        
+        $aPhoneType =  PhoneType::first();
+        $this->assertNotNull($aPhoneType);
+    }
 }

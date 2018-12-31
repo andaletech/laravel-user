@@ -4,14 +4,12 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-
 /**
  * Migration for the table that stores phone types.
  * 
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
  * @copyright 2018 Andale Technologies, SARL.
  * @license MIT
- * @package andaletech\laravel-user
  */
 class CreatePhoneTypesTable extends Migration
 {

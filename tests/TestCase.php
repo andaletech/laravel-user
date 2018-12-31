@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Tests\Setup\Database\Seeders\MainSeeder;
 
 /**
  * Base test class.
@@ -22,7 +23,9 @@ class TestCase extends OrchestraTestCase
         parent::setUp();
 
         $this->loadMigrationsFrom(__DIR__ . '/../src/Database/Migrations');
+        (new MainSeeder())->run();
     }
+
     /**
      * Define environment setup. @inheritDoc
      *
@@ -37,9 +40,10 @@ class TestCase extends OrchestraTestCase
             'database.connections.testdb',
             [
                 'driver'   => 'sqlite',
-                'database' => ':memory:',//'./testdb.sqlite',
+                'database' => ':memory:', /* __DIR__ . './testdb.sqlite', */
                 'prefix'   => '',
             ]
         );
     }
+
 }

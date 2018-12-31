@@ -2,6 +2,8 @@
 This package contains useful models and functionalities need when implementing a Laravel 5 app that manages users, phone number, addresses, etc.
 At its core, its unopinionated. It aims to simply  provide the building blocks while leaving the wiring to the application that uses it.
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![StyleCI](https://github.styleci.io/repos/163604286/shield?branch=master)](https://github.styleci.io/repos/163604286)
 ## Note: This is work in progress
 
 ## License
