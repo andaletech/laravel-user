@@ -26,7 +26,7 @@ class TestCase extends OrchestraTestCase
     }
 
     /**
-     * Define environment setup. {@inheritDoc}
+     * Define environment setup. {@inheritdoc}
      *
      * @param  \Illuminate\Foundation\Application  $app
      * @return void
