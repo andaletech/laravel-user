@@ -4,6 +4,7 @@ namespace Tests\Setup\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Andaletech\LaravelUser\Database\Seeds\PhoneTypeSeeder;
+use Andaletech\LaravelUser\Database\Seeds\AddressTypeSeeder;
 
 /**
  * This is the main seeder used to run all other seeders needed for testing.
@@ -22,5 +23,6 @@ class MainSeeder extends Seeder
     public function run()
     {
         $this->call(PhoneTypeSeeder::class);
+        $this->call(AddressTypeSeeder::class);
     }
 }

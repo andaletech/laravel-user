@@ -16,7 +16,7 @@ use Andaletech\LaravelUser\Models\PhoneNumber;
 class PhoneNumberModelTest extends TestCase
 {
     /**
-     * Test that you can create a PhoneType model in db.
+     * Test that you can create a PhoneNumber model in db.
      *
      * @test
      * @return void
