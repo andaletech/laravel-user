@@ -3,9 +3,8 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Andaletech\LaravelUser\Models\AddressType;
-use Andaletech\LaravelUser\Database\Seeds\AddressTypeSeeder;
 use Andaletech\LaravelUser\Models\Address;
+use Andaletech\LaravelUser\Models\AddressType;
 
 /**
  * Unit test class for Andaletech\LaravelUser\Models\AddressType eloquent model.
