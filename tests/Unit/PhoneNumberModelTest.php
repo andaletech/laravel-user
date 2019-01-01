@@ -5,7 +5,6 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Andaletech\LaravelUser\Models\PhoneType;
 use Andaletech\LaravelUser\Models\PhoneNumber;
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 
 /**
  * Unit test class for Andaletech\LaravelUser\Models\PhoneNumber eloquent model.

@@ -33,6 +33,7 @@ class PhoneTypeSeeder extends Seeder
             'display_name' => 'Office',
         ],
     ];
+
     /**
      * Run the database seeds.
      *
@@ -58,6 +59,7 @@ class PhoneTypeSeeder extends Seeder
             $type->{$attribute} = $value;
         }
         $type->save();
+
         return $type;
     }
 }

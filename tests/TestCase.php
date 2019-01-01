@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Tests\Setup\Database\Seeders\MainSeeder;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 /**
  * Base test class.
- * 
+ *
  * @author Kolado Sidibe <kolado.sidibe@olympuscloud.com>
  * @copyright 2018 Andale Technologies, SARL.
  * @license MIT
@@ -22,12 +22,12 @@ class TestCase extends OrchestraTestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/../src/Database/Migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../src/Database/Migrations');
         (new MainSeeder())->run();
     }
 
     /**
-     * Define environment setup. @inheritDoc
+     * Define environment setup. {@inheritDoc}
      *
      * @param  \Illuminate\Foundation\Application  $app
      * @return void
@@ -40,10 +40,9 @@ class TestCase extends OrchestraTestCase
             'database.connections.testdb',
             [
                 'driver'   => 'sqlite',
-                'database' => ':memory:', /* __DIR__ . './testdb.sqlite', */
+                'database' => ':memory:',
                 'prefix'   => '',
             ]
         );
     }
-
 }

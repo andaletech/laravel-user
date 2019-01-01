@@ -4,8 +4,6 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Andaletech\LaravelUser\Models\PhoneType;
-// use Andaletech\LaravelUser\Models\Gender;
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 
 /**
  * Unit test class for Andaletech\LaravelUser\Models\PhoneType eloquent model.
@@ -33,8 +31,7 @@ class PhoneTypeModelTest extends TestCase
         $aPhoneType->display_name = $data['display_name'];
         $aPhoneType->save();
         $this->assertNotEmpty($aPhoneType);
-        foreach($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $this->assertEquals($value, $aPhoneType->{$key});
         }
     }
@@ -47,8 +44,7 @@ class PhoneTypeModelTest extends TestCase
      */
     public function seeder_works()
     {
-        
-        $aPhoneType =  PhoneType::first();
+        $aPhoneType = PhoneType::first();
         $this->assertNotNull($aPhoneType);
     }
 }

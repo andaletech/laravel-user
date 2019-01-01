@@ -22,5 +22,5 @@ class MainSeeder extends Seeder
     public function run()
     {
         $this->call(PhoneTypeSeeder::class);
-    }
+    } 
 }

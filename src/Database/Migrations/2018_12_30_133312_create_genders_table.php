@@ -24,6 +24,7 @@ class CreateGendersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 50)->unique();
             $table->string('display_name', 100)->unique();
+            // $table->string('translation_key')->nullable();
             // $table->string('display_name_fr', 100)->unique();
             $table->timestamps();
             $table->softDeletes();
