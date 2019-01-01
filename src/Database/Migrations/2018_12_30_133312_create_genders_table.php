@@ -6,11 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Migration for the genders table.
- * 
+ *
  * @author Kolado Sidibe <kolado.sidibe>
  * @copyright 2018 Andale Technologies, SARL.
  * @license MIT
- * @package andaletech\laravel-user
  */
 class CreateGendersTable extends Migration
 {

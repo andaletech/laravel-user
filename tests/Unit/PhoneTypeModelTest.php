@@ -9,7 +9,7 @@ use Andaletech\LaravelUser\Models\PhoneType;
 
 /**
  * Unit test class for Andaletech\LaravelUser\Models\PhoneType eloquent model.
- * 
+ *
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
  * @copyright 2018 Andale Technologies, SARL.
  * @license MIT

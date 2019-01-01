@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * Migration for the table that stores phone types.
- * 
+ *
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
  * @copyright 2018 Andale Technologies, SARL.
  * @license MIT
