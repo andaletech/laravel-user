@@ -22,10 +22,10 @@ class CreatePhoneNumbersTable extends Migration
     {
         Schema::create('phone_numbers', function (Blueprint $table) {
             $table->bigIncrements('id');
-			$table->bigInteger('type_id', false, true)->nullable();
-			$table->bigInteger('owner_id', false, true);
-			$table->string('owner_type', 500);
-			$table->string('number', 100);
+            $table->bigInteger('type_id', false, true)->nullable();
+            $table->bigInteger('owner_id', false, true);
+            $table->string('owner_type', 500);
+            $table->string('number', 100);
             $table->timestamps();
             // $table->softDeletes();
 

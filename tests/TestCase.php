@@ -14,7 +14,6 @@ use Orchestra\Testbench\TestCase as OrchestraTestCase;
  */
 class TestCase extends OrchestraTestCase
 {
-
     /**
      * Setup the test environment.
      */
