@@ -40,11 +40,12 @@ class Tool
     public function instantiateModel(string $modelFqn, array $data, $save = false) : Model
     {
         $model = new $modelFqn();
-        return self::setModelAttributes($model, $data);
+        $model = self::setModelAttributes($model, $data);
         if ($save) {
             $model->save();
         }
 
         return $model;
     }
+
 }
