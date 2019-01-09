@@ -47,5 +47,4 @@ class Tool
 
         return $model;
     }
-
 }
