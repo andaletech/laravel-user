@@ -25,7 +25,7 @@ class Tool
         foreach ($attributes as $key => $value) {
             $model->{$key} = $value;
         }
-        
+
         return $model;
     }
 
@@ -34,7 +34,7 @@ class Tool
      *
      * @param string $modelFqn
      * @param array $data
-     * @param boolean $save Set to true to save the instantiated model before returning it.
+     * @param bool $save Set to true to save the instantiated model before returning it.
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function instantiateModel(string $modelFqn, array $data, $save = false) : Model
@@ -45,6 +45,7 @@ class Tool
         {
             $model->save();
         }
+        
         return $model;
     }
 }

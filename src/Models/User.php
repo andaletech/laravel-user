@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class User extends Model
 {
-
     #region accessors & mutators
 
     /**
@@ -25,6 +24,7 @@ class User extends Model
     public function encryptAndSetPwd(string $clearPwd) : self
     {
         $this->attributes['password'] = bcrypt($clearPwd);
+
         return $this;
     }
 

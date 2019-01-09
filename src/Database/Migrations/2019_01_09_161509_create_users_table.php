@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('first_name')->index();
             $table->date('dob')->nullable();
-			$table->bigInteger('gender_id', false, true)->nullable();
+            $table->bigInteger('gender_id', false, true)->nullable();
             $table->string('email')->nullable();
             $table->string('username')->unique();
             $table->string('password');
@@ -32,8 +32,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            /**
-             * uncomment if needed
+            /*
+             * Uncomment if needed
              */
             // $table->foreign('gender_id')->references('id')->on('genders');
         });
