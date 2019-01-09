@@ -3,9 +3,9 @@
 namespace Tests\Setup\Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Andaletech\LaravelUser\Database\Seeds\GenderSeeder;
 use Andaletech\LaravelUser\Database\Seeds\PhoneTypeSeeder;
 use Andaletech\LaravelUser\Database\Seeds\AddressTypeSeeder;
-use Andaletech\LaravelUser\Database\Seeds\GenderSeeder;
 
 /**
  * This is the main seeder used to run all other seeders needed for testing.

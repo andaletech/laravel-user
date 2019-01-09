@@ -39,8 +39,7 @@ class GenderSeeder extends Seeder
     {
         foreach (self::GENDERS_DATA as $aData) {
             $aGender = Gender::where('name', $aData['name'])->first();
-            if(empty($aGender))
-            {
+            if (empty($aGender)) {
                 $this->createGender($aData);
             }
         }

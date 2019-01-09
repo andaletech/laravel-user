@@ -22,7 +22,7 @@ class User extends Model
      * @param string $clearPwd
      * @return \Andaletech\LaravelUser\Models\User
      */
-    public function encryptAndSetPwd(string $clearPwd) : User
+    public function encryptAndSetPwd(string $clearPwd) : self
     {
         $this->attributes['password'] = bcrypt($clearPwd);
         return $this;

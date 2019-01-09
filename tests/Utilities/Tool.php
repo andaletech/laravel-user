@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * A utility class that contains some useful, static methods.
- * 
+ *
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
  * @copyright 2019 Andale Technologies, SARL.
  * @license MIT
@@ -25,11 +25,12 @@ class Tool
         foreach ($attributes as $key => $value) {
             $model->{$key} = $value;
         }
+        
         return $model;
     }
 
     /**
-     * Instantiate the eloquent model specified by $modelFqn using the attributes defined in $data
+     * Instantiate the eloquent model specified by $modelFqn using the attributes defined in $data.
      *
      * @param string $modelFqn
      * @param array $data
@@ -39,7 +40,7 @@ class Tool
     public function instantiateModel(string $modelFqn, array $data, $save = false) : Model
     {
         $model = new $modelFqn();
-        return Tool::setModelAttributes($model, $data);
+        return self::setModelAttributes($model, $data);
         if($save)
         {
             $model->save();

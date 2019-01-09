@@ -13,4 +13,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Gender extends Model
 {
+    #region query scopes
+
+    /* public function scopeMale(Builder $query)
+    {
+        return $query->where('name', 'male');
+    } */
+
+    #endregion query scopes
 }
