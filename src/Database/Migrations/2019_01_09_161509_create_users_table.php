@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('first_name')->index();
             $table->date('dob')->nullable();
-			$table->bigInteger('gender_id', false, true )->nullable();
+			$table->bigInteger('gender_id', false, true)->nullable();
             $table->string('email')->nullable();
             $table->string('username')->unique();
             $table->string('password');
@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('path_to_picture')->nullable();
             $table->string('picture_url')->nullable();
             $table->rememberToken();
-            
+
             $table->timestamps();
             $table->softDeletes();
 
