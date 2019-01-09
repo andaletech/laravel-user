@@ -41,11 +41,10 @@ class Tool
     {
         $model = new $modelFqn();
         return self::setModelAttributes($model, $data);
-        if($save)
-        {
+        if ($save) {
             $model->save();
         }
-        
+
         return $model;
     }
 }
