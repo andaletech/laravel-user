@@ -7,7 +7,7 @@ use Andaletech\LaravelUser\Models\Address;
 use Andaletech\LaravelUser\Models\AddressType;
 
 /**
- * Unit test class for Andaletech\LaravelUser\Models\AddressType eloquent model.
+ * Unit test class for Andaletech\LaravelUser\Models\Address eloquent model.
  *
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
  * @copyright 2018 Andale Technologies, SARL.
@@ -24,12 +24,6 @@ class AddressModelTest extends TestCase
     public function can_create_an_address()
     {
         $homeType = AddressType::where('name', 'home')->first();
-        // $table->bigInteger('address_type_id', false, true)->nullable();
-        //     $table->string('line_2', 100)->nullable();
-        //     $table->string('city', 100);
-        //     $table->string('state', 100)->nullable();
-        //     $table->string('postal_code', 20)->nullable();
-        //     $table->string('country', 100)->nullable();
         $data = [
             'address_type_id' => $homeType->id,
             'owner_type' => 'Andaletech\LaravelUser\Models\User',
