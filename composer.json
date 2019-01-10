@@ -1,6 +1,7 @@
 {
     "name": "andaletech/laravel-user",
-    "description": "A Laravel 5.7+ package provides a set of user and role models",
+    "description": "A Laravel/Lumen 5.7+ package provides a set of user and role models",
+    "homepage": "https://github.com/andaletech/laravel-user",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -32,5 +33,12 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Andaletech\\LaravelUser"
+            ]
+        }
     }
 }
