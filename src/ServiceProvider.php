@@ -21,7 +21,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/aTechLaravelUser.php' => config_path('aTechLaravelUser.php')
+            __DIR__.'/config/aTechLaravelUser.php' => config_path('aTechLaravelUser.php'),
         ]);
     }
 
