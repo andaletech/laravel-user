@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Utilities;
+namespace Andaletech\LaravelUser\Utilities;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,8 +11,22 @@ use Illuminate\Database\Eloquent\Model;
  * @copyright 2019 Andale Technologies, SARL.
  * @license MIT
  */
-class Tool
+class Tools
 {
+    /**
+     * Returns a string of $count whitespaces.
+     *
+     * @param int $count The number of whitespace to return. Default $count = 1
+     * @return string
+     */
+    public static function stringSpace(int $count = 1)
+    {
+        $retValue = '';
+        $count = intval($count);
+        $count = $count > 0 ? $count : 1;
+
+        return str_pad($retValue, $count);
+    }
     /**
      * Set the attributes of $model using the sets of $anAttribute => $value pairs defined in the array $attributes.
      *
@@ -37,7 +51,7 @@ class Tool
      * @param bool $save Set to true to save the instantiated model before returning it.
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function instantiateModel(string $modelFqn, array $data, $save = false) : Model
+    public static function instantiateModel(string $modelFqn, array $data, $save = false) : Model
     {
         $model = new $modelFqn();
         $model = self::setModelAttributes($model, $data);

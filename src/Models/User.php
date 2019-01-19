@@ -3,6 +3,7 @@
 namespace Andaletech\LaravelUser\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Andaletech\LaravelUser\Utilities\Tools;
 
 /**
  * The user eloquent model.
@@ -16,16 +17,22 @@ class User extends Model
     #region accessors & mutators
 
     /**
-     * Encrypt and set the password for this user.
+     * Accesor for the full_name_last_first attribute.
      *
-     * @param string $clearPwd
-     * @return \Andaletech\LaravelUser\Models\User
+     * @param mix $value
+     * @return string the full name of the user in the format LastName, FirstName (i.e. Doe, John)
      */
-    public function encryptAndSetPwd(string $clearPwd) : self
+    public function getFullNameLastFirstAttribute($value)
     {
-        $this->attributes['password'] = bcrypt($clearPwd);
+        $middleName = empty($this->middle_name) ? '' : Tools::stringSpace() . $this->middle_name;
 
-        return $this;
+        return implode(
+            Tools::stringSpace(),
+            [
+                $this->last_name . $middleName . ',',
+                $this->first_name
+            ]
+        );
     }
 
     #endregion accessors & mutators

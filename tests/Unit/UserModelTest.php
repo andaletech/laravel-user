@@ -4,15 +4,15 @@ namespace Tests\Unit;
 
 use Hash;
 use Tests\TestCase;
-use Tests\Utilities\Tool;
 use Andaletech\LaravelUser\Models\User;
 use Andaletech\LaravelUser\Models\Gender;
+use Andaletech\LaravelUser\Utilities\Tools;
 
 /**
  * Unit test class for Andaletech\LaravelUser\Models\User eloquent model.
  *
  * @author Kolado Sidibe <kolado.sidibe@andaletech.com>
- * @copyright 2018 Andale Technologies, SARL.
+ * @copyright 2019 Andale Technologies, SARL.
  * @license MIT
  */
 class UserModelTest extends TestCase
@@ -31,8 +31,8 @@ class UserModelTest extends TestCase
             'username' => 'johnsmith',
         ];
         $aUser = new User();
-        $aUser = Tool::setModelAttributes($aUser, $data);
-        $aUser->encryptAndSetPwd('P@55w0rd');
+        $aUser = Tools::setModelAttributes($aUser, $data);
+        $aUser->password =  bcrypt('P@55w0rd');
         $aUser->save();
         $this->assertNotEmpty($aUser->id);
         $this->assertTrue(Hash::check('P@55w0rd', $aUser->password));
@@ -57,8 +57,8 @@ class UserModelTest extends TestCase
             'gender_id' => $aGender->id,
         ];
         $aUser = new User();
-        $aUser = Tool::setModelAttributes($aUser, $data);
-        $aUser->encryptAndSetPwd('P@55w0rd');
+        $aUser = Tools::setModelAttributes($aUser, $data);
+        $aUser->password =  bcrypt('P@55w0rd');
         $aUser->save();
         $this->assertNotEmpty($aUser->id);
         $this->assertTrue(Hash::check('P@55w0rd', $aUser->password));
