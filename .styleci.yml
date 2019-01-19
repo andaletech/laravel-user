@@ -1,3 +1,4 @@
 preset: laravel
 disabled:
   - hash_to_slash_comment
+  - concat_without_spaces

@@ -32,7 +32,7 @@ class UserModelTest extends TestCase
         ];
         $aUser = new User();
         $aUser = Tools::setModelAttributes($aUser, $data);
-        $aUser->password =  bcrypt('P@55w0rd');
+        $aUser->password = bcrypt('P@55w0rd');
         $aUser->save();
         $this->assertNotEmpty($aUser->id);
         $this->assertTrue(Hash::check('P@55w0rd', $aUser->password));
@@ -58,7 +58,7 @@ class UserModelTest extends TestCase
         ];
         $aUser = new User();
         $aUser = Tools::setModelAttributes($aUser, $data);
-        $aUser->password =  bcrypt('P@55w0rd');
+        $aUser->password = bcrypt('P@55w0rd');
         $aUser->save();
         $this->assertNotEmpty($aUser->id);
         $this->assertTrue(Hash::check('P@55w0rd', $aUser->password));

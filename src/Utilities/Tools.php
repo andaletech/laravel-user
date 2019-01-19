@@ -27,6 +27,7 @@ class Tools
 
         return str_pad($retValue, $count);
     }
+
     /**
      * Set the attributes of $model using the sets of $anAttribute => $value pairs defined in the array $attributes.
      *
