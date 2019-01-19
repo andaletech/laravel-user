@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use Hash;
 use Tests\TestCase;
 use Andaletech\LaravelUser\Models\User;
 use Andaletech\LaravelUser\Utilities\Tools;

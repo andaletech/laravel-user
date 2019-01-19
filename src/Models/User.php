@@ -30,7 +30,7 @@ class User extends Model
             Tools::stringSpace(),
             [
                 $this->last_name . $middleName . ',',
-                $this->first_name
+                $this->first_name,
             ]
         );
     }
