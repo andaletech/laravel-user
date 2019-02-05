@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Andaletech\LaravelUser;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -21,7 +21,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/aTechLaravelUser.php' => config_path('aTechLaravelUser.php'),
+            __DIR__ . '/config/aTechLaravelUser.php' => config_path('aTechLaravelUser.php'),
         ]);
     }
 
@@ -32,6 +32,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/aTechLaravelUser.php', 'aTechLaravelUser');
+        $this->mergeConfigFrom(__DIR__ . '/config/aTechLaravelUser.php', 'aTechLaravelUser');
     }
 }
